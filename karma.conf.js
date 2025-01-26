@@ -7,7 +7,7 @@ module.exports = function (config) {
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
       require('karma-jasmine'),
-      require('karma-safari-launcher'),
+      require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
       require('karma-mocha-reporter'),
@@ -27,12 +27,12 @@ module.exports = function (config) {
       suppressAll: true, // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/toma1133.github.io'),
+      dir: require('path').join(__dirname, './reports/coverage/toma1133.github.io'),
       subdir: '.',
       reporters: [{ type: 'html' }, { type: 'text-summary' }],
     },
     reporters: ['mocha', 'progress', 'coverage', 'kjhtml'],
-    browsers: ['Safari'],
+    browsers: ['ChromeHeadless'],
     colors: true,
     logLevel: config.LOG_WARN,
     autoWatch: true,

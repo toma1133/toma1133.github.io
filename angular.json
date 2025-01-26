@@ -95,7 +95,9 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"],
+            "name": "Nick Su",
+            "email": "tomatomatotoma@gmail.com"
           }
         }
       }
